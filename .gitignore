@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Excel temporaires
+~$*.xls*
+*.tmp
+
+# Fichiers Excel avec macros (binaires)
+*.xlsm
+*.xlam
+
+# Données sensibles
+data/raw/*
+
+# OS / IDE
+.vscode/
+.DS_Store
+Thumbs.db
