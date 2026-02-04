@@ -39,32 +39,62 @@ Chaque type d’anomalie est **garanti au moins une fois** dans le fichier final
 ---
 
 ## Anomalies simulées et règles (via macro VBA)
-- Vérifier RIB
- - Colonne A – Bénéficiaire = AKAMAI
-- Vérifier Numéro Facture
- - Colonne C – Numéro :
-  - vide
-  - commence par TIT
-  - se termine par TIT
-  - ou premier caractère non alphanumérique
-- ≥ 800K€
- - Colonne P – Total à payer ≥ 800 000 €
-- Vérifier Date passée
- - Colonne R – Date de fin du compte < date du jour
-- Mettre en PG18 IBAN
- - Colonne S – IBAN se termine par l’un des suffixes suivants :
-  - 1623, 3310, 9742, 43840
-- Mettre en PG03 BIC
- - Colonne T – BIC :
-  - vide
-  - ou commence par TRPU
-  - ou commence par BDFEFRPP
-- Mettre RIB Bloqué
- - Colonne T – BIC commence par l’un des codes suivants :
-  - NORDFRPP, TARNFR, COURTFR, KOLBFR, BNUGFR, RAPLFR, SMCTFR, SGBTMC, SBGDFRP
-- PAYS non autorisé
- - Colonne U – Pays de la banque ≠
-  - FR, RE, MQ, GP, GF, PF
+
+### Vérifier RIB
+- **Colonne A – Bénéficiaire**
+  - Valeur égale à `AKAMAI`
+
+### Vérifier Numéro Facture
+- **Colonne C – Numéro**
+  - Vide
+  - Commence par `TIT`
+  - Se termine par `TIT`
+  - Premier caractère non alphanumérique
+
+### ≥ 800K€
+- **Colonne P – Total à payer**
+  - Montant supérieur ou égal à **800 000 €**
+
+### Vérifier Date passée
+- **Colonne R – Date de fin du compte**
+  - Date antérieure à la date du jour
+
+### Mettre en PG18 IBAN
+- **Colonne S – IBAN**
+  - Se termine par l’un des suffixes suivants :
+    - `1623`
+    - `3310`
+    - `9742`
+    - `43840`
+
+### Mettre en PG03 BIC
+- **Colonne T – BIC**
+  - Vide
+  - Commence par `TRPU`
+  - Commence par `BDFEFRPP`
+
+### Mettre RIB Bloqué
+- **Colonne T – BIC**
+  - Commence par l’un des codes suivants :
+    - `NORDFRPP`
+    - `TARNFR`
+    - `COURTFR`
+    - `KOLBFR`
+    - `BNUGFR`
+    - `RAPLFR`
+    - `SMCTFR`
+    - `SGBTMC`
+    - `SBGDFRP`
+
+### PAYS non autorisé
+- **Colonne U – Pays de la banque**
+  - Valeur différente de :
+    - `FR`
+    - `RE`
+    - `MQ`
+    - `GP`
+    - `GF`
+    - `PF`
 
 ---
 
