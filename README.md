@@ -18,7 +18,8 @@ Le projet illustre une approche pragmatique combinant **automatisation Python** 
   - IBAN / BIC
   - pays de la banque
 
-Toutes les données présentes dans ce dépôt sont **fictives et générées automatiquement**.
+La macro VBA constitue le cœur du contrôle financier et des règles métiers.
+Un script Python est utilisé en amont pour anonymiser les fichiers MEP et générer des jeux de tests reproductibles sans exposition de données sensibles.
 
 ---
 
