@@ -156,6 +156,11 @@ data/demo/mep_anonymized.xlsx
 
 ---
 
+## Choix techniques & Optimisations
+Dans une optique de **MVP** (Minimum Viable Product) et de respect des délais, certains choix pragmatiques ont été privilégiés :
+- **Structure fixe** : Le fichier source (données sensibles) conserve strictement le même format à chaque extraction. L'usage de références de colonnes statiques en VBA a donc été retenu pour sa simplicité, la structure étant garantie stable par le processus métier.
+- **Performance** : Le volume de données cible (~2000 lignes) permet un traitement itératif simple sans impact perceptible pour l'utilisateur, évitant la complexité inutile d'un traitement en mémoire (Array handling). 
+
 ## Sécurité & conformité
 - Aucun fichier sensible versionné
 - Données fictives uniquement
